@@ -15,6 +15,7 @@ public class Ejecutor2 {
         ArrayList<PasajeUrbano> pasajes = new ArrayList<>();
         String[] nombres = {"Austin", "Monique", "Glen", "Richard", "Patrick"};
         String[] apellidos = {"Martinez", "Lyons", "Kim", "Tate", "Lee"};
+        String[] ide = {"111", "222", "333", "444", "555"};
         int[] edad = {9, 70, 35, 23, 10};
         double pasajeFijo = 0.4;
         
@@ -37,7 +38,31 @@ public class Ejecutor2 {
         
         */
         // inicio de solución
-        
+        Persona persona;
+        PasajeUrbano aux;
+        for (int i=0; i<edad.length; i++) {
+            if (edad[i]>=0 && edad[i]<=18) {
+                persona = new Persona(nombres[i]+" "+apellidos[i], ide[i], edad[i]);
+                aux = new PasajeMenorEdad(pasajeFijo);
+                aux.establecerPersona(persona);
+                pasajes.add(aux);
+            } else if (edad[i]>18 && edad[i]<=25) {
+                persona = new Persona(nombres[i]+" "+apellidos[i], ide[i], edad[i]);
+                aux = new PasajeUniversitario(pasajeFijo);
+                aux.establecerPersona(persona);
+                pasajes.add(aux);
+            } else if (edad[i]>25 && edad[i]<65) {
+                persona = new Persona(nombres[i]+" "+apellidos[i], ide[i], edad[i]);
+                aux = new PasajeNormal(pasajeFijo);
+                aux.establecerPersona(persona);
+                pasajes.add(aux);
+            } else if (edad[i]>=65) {
+                persona = new Persona(nombres[i]+" "+apellidos[i], ide[i], edad[i]);
+                aux = new PasajeTerceraEdad(pasajeFijo);
+                aux.establecerPersona(persona);
+                pasajes.add(aux);
+            }
+        }
         
         // fin  de solución
         
@@ -50,6 +75,5 @@ public class Ejecutor2 {
             System.out.printf("%s\n",
                     pasajes.get(i));
         }
-
     }
 }

@@ -29,6 +29,10 @@ public class Persona {
         cedula = n;
     }
     
+    public void establecerEdad(int n){
+        edad = n;
+    }
+    
     public String obtenerNombre(){
         return nombre;
     }
@@ -37,4 +41,7 @@ public class Persona {
         return cedula;
     }
     
+    public int obtenerEdad(){
+        return edad;
+    }
 }

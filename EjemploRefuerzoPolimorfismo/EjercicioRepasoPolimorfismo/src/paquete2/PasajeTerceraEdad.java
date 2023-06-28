@@ -10,11 +10,16 @@ package paquete2;
  * @author reroes
  */
 public class PasajeTerceraEdad extends PasajeUrbano {
+    // El pasaje de tercera edad es el 50% del valor fijo
     
     public PasajeTerceraEdad(double pasaje){
         super(pasaje);
     }
     
+    @Override
+    public void establecerValorPasaje() {
+        valorPasaje = valorFijo-(valorFijo*0.5);
+    }
        
     @Override
     public String toString(){

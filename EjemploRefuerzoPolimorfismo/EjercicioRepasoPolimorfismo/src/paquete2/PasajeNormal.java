@@ -10,11 +10,15 @@ package paquete2;
  * @author reroes
  */
 public class PasajeNormal extends PasajeUrbano {
-    
+    // El pasaje normal tiene un costo igual al costo fijo
     public PasajeNormal(double pasaje){
         super(pasaje);
     }
     
+    @Override
+    public void establecerValorPasaje() {
+        valorPasaje = valorFijo;
+    }
     
     @Override
     public String toString(){
