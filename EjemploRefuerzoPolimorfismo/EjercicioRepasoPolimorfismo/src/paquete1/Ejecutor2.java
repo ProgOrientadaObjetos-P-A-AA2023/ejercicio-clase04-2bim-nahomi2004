@@ -15,6 +15,7 @@ public class Ejecutor2 {
         ArrayList<PasajeUrbano> pasajes = new ArrayList<>();
         String[] nombres = {"Austin", "Monique", "Glen", "Richard", "Patrick"};
         String[] apellidos = {"Martinez", "Lyons", "Kim", "Tate", "Lee"};
+        // No habia ID para cada persona asi que le agregue unos
         String[] ide = {"111", "222", "333", "444", "555"};
         int[] edad = {9, 70, 35, 23, 10};
         double pasajeFijo = 0.4;
